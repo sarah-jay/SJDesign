@@ -54,7 +54,7 @@ h3 {
 }
 
 h4 {
-    color: --black;
+    color: var(--black);
     font-family: 'Julius Sans One', sans-serif;
     font-size: 36px;  
 }
@@ -89,7 +89,6 @@ header {
 }
 
 nav p {
-    background-color: linear-gradient(var(--hot-blue), var(--hotpink));
     font-size: 2.5rem;
     text-align: center;
     height: 50px;
