@@ -161,31 +161,30 @@ main {
 }
 
 /* Portfolio Image Tiles */
+.container {
+    
+    display: flex;
+    flex-direction: column;
+    margin: 20% auto;
+    max-height: 1200px;
+}
+
+.portfolio-card {
+    height: 400px;
+}
+
 .project-image {
     max-width: 100%;
-    border: 1px solid aqua;
+    z-index: 0;
 }
 
 .project-title {
     background-color: var(--black);
-    width: 35%;
-    padding: 5px 20px;
+    width: 40%;
+    padding: 1% 2%;
     position: relative;
-    bottom: 130px;
-    left: 60px;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-}
-
-.portfolio-card {
-    border: 1px solid yellow;
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
+    top: -30%;
+    left: 10%;
 }
 
 /* Quick Links Footer */
@@ -213,6 +212,9 @@ main {
 /* Media Queries */
 /* Tablet View */
 @media screen and (min-width:768px) {
+    h3 {
+        font-size: 26pt;
+    }
     /* Portfolio Section */
     .container {
         width: 70%;
@@ -244,7 +246,7 @@ main {
         font-size: 52pt;
     }
     h3 {
-        font-size: 32pt;
+        font-size: 26pt;
     }
     h4 {
         font-size: 40pt;
@@ -271,6 +273,8 @@ main {
     #portfolio {
         max-height:200px;
         }
+/* Portfolio Cards  */
+    
     .container {
         width: 100%;
         flex-direction: row;
@@ -278,5 +282,8 @@ main {
     }
     .portfolio-card {
         max-width: 30%;
+    }
+    .project-title {
+        width: 50%;
     }
 }
