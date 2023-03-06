@@ -69,7 +69,7 @@ p {
 a:link {
     color: var(--white);
     font-family: 'Archivo Narrow', sans-serif;
-    font-size: 4vw;
+    font-size: 16pt;
     letter-spacing: .075em;
     text-decoration: none;
 }
@@ -85,6 +85,9 @@ a:hover {
 
 /* Header */
 header {
+    position: fixed;
+    z-index: 200;
+    width: 100%;
     background-color: var(--black);
     display: flex;
     flex-direction: column;
@@ -93,9 +96,44 @@ header {
 
 #home #hamburger {
     color: var(--white);
-    font-size: 4.5vw;
+    font-size: 24pt;
     position: relative;
     bottom: 3%;
+    cursor: pointer;
+}
+
+.toggle {
+    display: none;
+}
+
+
+nav ul {
+    background-color: #FEF4FB;
+    position: fixed;
+    width: 60%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    height: 90vh;
+    z-index: 999;
+    display: none;
+}
+
+nav ul li {
+    list-style-type: none;
+    padding: 5%;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color:#EE76CA;
+}
+
+.toggle:checked ~ ul {
+    display: flex;
 }
 
 /* Hero Section */
@@ -136,7 +174,7 @@ main {
     margin-bottom: 120px;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 300;
 }
 
 #portfolio h2 {
@@ -214,7 +252,36 @@ main {
 @media screen and (min-width:768px) {
     h3 {
         font-size: 26pt;
+    } 
+    a:link {
+        font-size: 24pt;
     }
+    /* Header */
+    header {
+        height: 15%;
+    }
+/* Nav */
+    label div {
+        display: none;
+    }
+
+    nav ul{
+        background-color:#262626;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height:4vh;
+        width: 100%;
+    }
+
+    nav ul li {
+        font-family: 'Julius Sans One', sans-serif;
+        padding: 0 10%;
+        position: relative;
+
+    }
+  
     /* Portfolio Section */
     .container {
         width: 70%;
@@ -255,12 +322,23 @@ main {
         font-size: 38pt;
     }
     a:link {
-        font-size: 38pt;
+        font-size: 30pt;
     }
     body {
         max-width: 1600px;
         margin: auto;
     }
+
+ /* Header */
+    header {
+        height: 18%;
+    }
+
+    nav ul {
+        position: relative;
+        top: 25%;
+    }
+    
  /* Hero Section */
     .hero-text {
         font-size: 38pt;
