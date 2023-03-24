@@ -119,8 +119,8 @@ header {
     }
     100% {
         background-image: linear-gradient(to top right, var(--hot-blue), var(--hotpink));
-    } */
-}
+    }
+} */
 
 .toggle {
     display: none;
