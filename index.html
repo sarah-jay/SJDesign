@@ -10,10 +10,10 @@
   <body>
     <!-- Header includes site name and either hamburger menu or traditional navigation -->
     <header id="home">
-      <div><h1>SJDesign</h1></div>
+      <h1>SJDesign</h1>
       <nav>
         <label for="toggle-menu">
-          <div id="hamburger">&#9776;</div>
+          <div id="hamburger" class="hamburger"><p>&#9776;</p></div>
         </label>
         <input type="checkbox" id="toggle-menu" class="toggle" />
         <ul>
@@ -46,35 +46,49 @@
     <!-- Portfolio Image Tiles (article, section, div??)-->
     <div class="container">
       <section class="portfolio-card">
-        <img
-          class="project-image"
-          src="images/ancient-child.png"
-          alt="Homepage redesign preview image"
-        />
-        <div class="project-title"><h3>Ancient Child</h3></div>
+        <div class="ancient-child">
+          <h3>Ancient Child</h3>
+        </div>
+        <div class="project-description">
+          <h4>Website Redesign</h4>
+          <h4>2023</h4>
+          <p>Adobe XD, HTML5, CSS3</p>
+        </div>
       </section>
+
       <section class="portfolio-card">
-        <img
-          class="project-image"
-          src="images/daphnes.png"
-          alt="Project preview image"
-        />
-        <h3 class="project-title">Daphne's</h3>
+        <div class="daphnes">
+          <h3>Daphne's</h3>
+        </div>
+        <div class="project-description">
+          <h4>In-Class Project</h4>
+          <h4>2023</h4>
+          <p>Figma</p>
+        </div>
       </section>
+
       <section class="portfolio-card">
-        <img
-          class="project-image"
-          src="images/flower-shoppe.png"
-          alt="Project preview image"
-        />
-        <h3 class="project-title">Flower Shoppe</h3>
+        <div class="flower-shoppe">
+          <h3>Flower Shoppe</h3>
+        </div>
+        <div class="project-description">
+          <h4>Google Project</h4>
+          <h4>2023</h4>
+          <p>Figma</p>
+        </div>
       </section>
     </div>
 
     <!-- Testimonials (on tablet and desktop only) -->
-    <section>
-      <h4></h4>
-      <p></p>
+    <section class="testimonials">
+      <h4>Testimonials</h4>
+      <div class="testimonial-container">
+        <p>
+          "Sarah is awesome and I love working with her. I got exactly what I
+          wanted!"
+        </p>
+        <p class="signature">-Everyone</p>
+      </div>
     </section>
 
     <!-- Quick Links Footer -->

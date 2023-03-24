@@ -41,7 +41,7 @@ h1 {
 h2 {
     color: var(--white);
     font-family: 'Julius Sans One', sans-serif;
-    font-size: 5.5vw;
+    font-size: 26pt;
     text-align: center;
     padding-top: 20px;
 }
@@ -49,21 +49,21 @@ h2 {
 h3 {
     color: var(--white);
     font-family: 'Archivo Narrow', sans-serif;
-    font-size: 5vw;
+    font-size: 20pt;
 }
 
 h4 {
     color: var(--black);
     font-family: 'Julius Sans One', sans-serif;
-    font-size: 4vw;  
+    font-size: 18pt;  
 }
 
 p {
     color: var(--white);
     font-family: 'Archivo Narrow', sans-serif;
-    font-size: 4vw;
-    letter-spacing: 2.5px;
-    line-height: 3;
+    font-size: 16pt;
+    letter-spacing: 2.4px;
+    line-height: 2;
 }
 
 a:link {
@@ -72,10 +72,6 @@ a:link {
     font-size: 16pt;
     letter-spacing: .075em;
     text-decoration: none;
-}
-
-a:visited {
-    color: var(--white);
 }
 
 a:hover {
@@ -95,11 +91,35 @@ header {
 }
 
 #home #hamburger {
-    color: linear-gradient(to bottom right, var(--hot-blue), var(--hotpink));
+    
+    cursor: pointer;
+}
+.hamburger p {
     font-size: 24pt;
+    line-height: 1;
     position: relative;
     bottom: 3%;
-    cursor: pointer;
+    animation-name: color-burger;
+    animation-duration: 5s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes color-burger {
+    0% {
+        background-image: linear-gradient(to top right, var(--hot-blue), var(--hotpink));
+    }
+    25% {
+        background-image: linear-gradient(to top left, var(--hot-blue), var(--hotpink));
+    }
+    50% {
+        background-image: linear-gradient(to bottom left, var(--hot-blue), var(--hotpink));
+    }
+    75% {
+        background-image: linear-gradient(to bottom right, var(--hot-blue), var(--hotpink));
+    }
+    100% {
+        background-image: linear-gradient(to top right, var(--hot-blue), var(--hotpink));
+    }
 }
 
 .toggle {
@@ -110,7 +130,7 @@ header {
 nav ul {
     background-color: #FEF4FB;
     position: fixed;
-    width: 60%;
+    width: 80%;
     display: flex;
     flex-direction: column; 
     justify-content: center;
@@ -121,20 +141,20 @@ nav ul {
 
 nav ul li {
     list-style-type: none;
-    padding: 5%;
+    padding: 10%;
 }
 
 nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a:hover {
+    color:#EE76CA;
+}
+
 nav ul li a:link {
     color:#262626;
     font-family: 'Julius Sans One', sans-serif;
-}
-
-nav ul li a:hover {
-    color:#EE76CA;
 }
 
 .toggle:checked ~ ul {
@@ -143,14 +163,40 @@ nav ul li a:hover {
 
 /* Hero Section */
 main {
-    background-image: linear-gradient(to bottom right, var(--hot-blue), var(--hotpink));
-    height: 85vh;
+    /* background-image: linear-gradient(to bottom right, var(--hot-blue), var(--hotpink)); */
+    /* height: 85vh; */
+    padding-top:250px;
+    padding-bottom: 250px;
     border: 1px solid var(--black);
     margin-bottom: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.main-container {
+    animation-name: color-me;
+    animation-duration: 5s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes color-me {
+    0% {
+        background-image: linear-gradient(to bottom right, var(--hot-blue), var(--hotpink));
+    }
+    25% {
+        background-image: linear-gradient(to bottom left, var(--hot-blue), var(--hotpink));
+    }
+    50% {
+        background-image: linear-gradient(to top left, var(--hot-blue), var(--hotpink));
+    }
+    75% {
+        background-image: linear-gradient(to top right, var(--hot-blue), var(--hotpink));
+    }
+    100% {
+        background-image: linear-gradient(to bottom right, var(--hot-blue), var(--hotpink));
+    }
 }
 
 .hero-text {
@@ -169,6 +215,18 @@ main {
     position: relative;
     left: 40px;
     top: 80px;
+    animation-name: move-me;
+    animation-duration: 3s;
+    transition-timing-function: ease-in;
+    animation-iteration-count:infinite;
+}
+@keyframes move-me {
+    from{
+        transform: translate(120px);
+    }
+    to {
+        transform: translate(30px);
+    }
 }
 
 /* Portfolio Header */
@@ -177,20 +235,12 @@ main {
     display: flex;
     flex-direction: column;
     margin-bottom: 120px;
-    /* position: sticky; */
     top: 0;
-    z-index: 300;
 }
 
 #portfolio h2 {
     position: relative;
     top: 5%;
-}
-
-.breadcrumbs li {
-    list-style: none;
-    font-size: 4vw;
-    padding: 0 1%;
 }
 
 .breadcrumbs {
@@ -199,7 +249,22 @@ main {
     align-items: center;
 }
 
+.breadcrumbs li {
+    list-style: none;
+    font-size: 16pt;
+    padding: 0 1%;
+}
+
+.breadcrumbs li a:visited {
+    color: var(--white)
+ }
+
+.breadcrumbs li a:hover {
+    color: var(--hotpink)
+ } 
+
 .breadcrumbs p {
+    font-size: 20pt;
     line-height: 1;
 }
 
@@ -208,26 +273,93 @@ main {
     
     display: flex;
     flex-direction: column;
-    margin: 20% auto;
-    max-height: 1200px;
+    margin: 10% auto;
 }
 
-.portfolio-card {
-    height: 400px;
-}
-
-.project-image {
-    max-width: 100%;
-    z-index: 0;
-}
-
-.project-title {
+.ancient-child {
     background-color: var(--black);
-    width: 40%;
-    padding: 1% 2%;
+    background-image: url("../images/ancient-child.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 250px;
+    padding-bottom: 100px;
+}
+
+.ancient-child h3 {
+    background-color: var(--black);
+    width:30%;
+    padding-left: 3%;
+    padding-right: 10%;
     position: relative;
-    top: -30%;
-    left: 10%;
+    left: 5%;
+}
+
+.daphnes {
+    background-color: var(--black);
+    background-image: url("../images/daphnes.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 250px;
+    padding-bottom: 100px;
+}
+
+.daphnes h3 {
+    background-color: var(--black);
+    width:30%;
+    padding-left: 3%;
+    padding-right: 10%;
+    position: relative;
+    left: 5%;
+}
+
+.flower-shoppe {
+    background-color: var(--black);
+    background-image: url("../images/flower-shoppe.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 250px;
+    padding-bottom: 100px;
+}
+.flower-shoppe h3 {
+    background-color: var(--black);
+    width:30%;
+    padding-left: 3%;
+    padding-right: 10%;
+    position: relative;
+    left: 5%;
+}
+
+.project-description {
+    display: none;
+}
+
+/* Testimonials */
+.testimonials {
+    background-color: var(--light-ash);
+    display: none;
+}
+
+.testimonials h4 {
+    padding: 5%;
+    text-align: center;
+}
+
+.testimonials p {
+    color: var(--black);
+    line-height: 1.25;
+}
+
+.testimonial-container {
+    width: 50%;
+    position: relative;
+    left: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.signature {
+    text-align: right;
+    padding: 5%;
 }
 
 /* Quick Links Footer */
@@ -252,6 +384,10 @@ main {
     padding: 10px;
 }
 
+#quick-links li a:visited {
+    color: var(--white)
+}
+
 /* Media Queries */
 /* Tablet View */
 @media screen and (min-width:768px) {
@@ -262,7 +398,7 @@ main {
         font-size: 26pt;
     } 
     a:link {
-        font-size: 24pt;
+        font-size: 22pt;
     }
     /* Header */
     header {
@@ -291,15 +427,39 @@ main {
         color:#FCFCFC;
         font-family: 'Julius Sans One', sans-serif;
     }
-
+    a:visited {
+        color: var(--white);
+    }
     nav ul li a:hover {
         color: var(--hotpink)
     }
   
     /* Portfolio Section */
     .container {
-        width: 70%;
+        width: 80%;
     }
+
+    .project-description {
+        display: block;
+        padding-top: 2%;
+        padding-left: 5%;
+        margin-bottom: 2%;
+    }
+
+    .project-description h4 {
+        color: var(--white);
+        font-family: 'Archivo Narrow', sans-serif;
+        font-size: 20pt;
+        letter-spacing: 2.4px;
+    }
+
+    /* Testimonials */
+
+    .testimonials {
+        display: block;
+    }
+
+
     /* Footer */
     #quick-links {
         max-height: 100px;
@@ -326,17 +486,8 @@ main {
     h2 {
         font-size: 52pt;
     }
-    h3 {
-        font-size: 26pt;
-    }
-    h4 {
-        font-size: 40pt;
-    }
-    p {
-        font-size: 38pt;
-    }
     a:link {
-        font-size: 30pt;
+        font-size: 26pt;
     }
     body {
         max-width: 1600px;
@@ -360,21 +511,40 @@ main {
         font-size: 46pt;
     }
     
-/* Portfolio Header */
-    #portfolio {
-        max-height:200px;
-        }
 /* Portfolio Cards  */
     
     .container {
-        width: 100%;
+        width: 90%;
         flex-direction: row;
-        justify-content: center;
     }
+
     .portfolio-card {
-        max-width: 30%;
+        width: 33.33%;
     }
-    .project-title {
+
+    .ancient-child {
+        padding-top: 100px;
+    }
+    .ancient-child h3 {
         width: 50%;
+    }
+    .daphnes {
+        padding-top: 100px;
+    }
+    .daphnes h3 {
+        width: 50%;
+    }
+    .flower-shoppe {
+        padding-top: 100px;
+    }
+    .flower-shoppe h3 {
+        width: 50%;
+    }
+  
+ /* Testimonials */
+
+    .testimonials {
+    width: 80%;
+    margin: 0 auto;
     }
 }
