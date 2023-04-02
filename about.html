@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <title>About Me</title>
+  </head>
+  <body id="about">
+    <!-- Header -->
+    <header id="home">
+      <h1>SJDesign</h1>
+      <nav>
+        <label for="toggle-menu">
+          <div id="hamburger" class="hamburger"><p>&#9776;</p></div>
+        </label>
+        <input type="checkbox" id="toggle-menu" class="toggle" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div id="about-breadcrumbs">
+      <ul class="breadcrumbs">
+        <li><a href="index.html">Home</a></li>
+        <li><p>/</p></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+
+    <!-- About Content -->
+    <section id="about-container">
+      <div id="about-photo">
+        <img
+          src="images/self-photo.png"
+          alt="A photo of Sarah on her school campu "
+        />
+      </div>
+      <div class="text-container">
+        <h4 class="white-h4">Hi! I'm Sarah</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
+          quibusdam obcaecati voluptas nulla officia, placeat, sed quia ipsum
+          praesentium corporis hic expedita. Pariatur deserunt maiores tempore
+          quas praesentium commodi minus.
+        </p>
+      </div>
+    </section>
+
+    <!-- Testimonials (on tablet and desktop only) -->
+    <section class="testimonials" id="about-testimonials">
+      <h4>Testimonials</h4>
+      <div class="testimonial-container">
+        <p>
+          "Sarah is awesome and I love working with her. I got exactly what I
+          wanted!"
+        </p>
+        <p class="signature">-Everyone</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="header" id="contact">
+      <h2>Contact</h2>
+      <ul class="breadcrumbs">
+        <li><a href="#home">Home</a></li>
+        <li><p>/</p></li>
+        <li><a href="#portfolio">Contact</a></li>
+      </ul>
+    </section>
+    <section id="contact-container">
+      <div class="text-container">
+        <h4 class="white-h4">Let's Connect!</h4>
+        <p>
+          Have a project in mind? Or, interested in talking with me about a
+          design position? Please reach out, I would love to chat. I typically
+          respond to emails within a couple days. <br />Talk to you soon!
+        </p>
+        <a class="gradient-link" href="#">View My LinkedIn</a>
+        <a href="#">Download My Resume</a>
+      </div>
+      <div id="form">
+        <div id="form.container">
+          <form>
+            <input type="text" id="name" name="name" placeholder="Name" />
+            <br />
+            <input type="email" id="email" name="email" placeholder="Email" />
+            <br />
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Subject"
+              autocomplete="off"
+            />
+            <br />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Message"
+            ></textarea>
+            <br />
+            <button type="submit" value="Submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Links Footer -->
+    <footer id="quick-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Resume</a></li>
+        <li><a href="#">Email</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
