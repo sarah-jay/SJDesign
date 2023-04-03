@@ -8,97 +8,99 @@
     <link href="css/styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <!-- Header includes site name and either hamburger menu or traditional navigation -->
-    <header id="home">
-      <h1>SJDesign</h1>
-      <nav>
-        <label for="toggle-menu">
-          <div id="hamburger" class="hamburger"><p>&#9776;</p></div>
-        </label>
-        <input type="checkbox" id="toggle-menu" class="toggle" />
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="about.html">About</a></li>
+    <div class="site-container">
+      <!-- Header includes site name and either hamburger menu or traditional navigation -->
+      <header id="home">
+        <h1>SJDesign</h1>
+        <nav>
+          <label for="toggle-menu">
+            <div id="hamburger" class="hamburger"><p>&#9776;</p></div>
+          </label>
+          <input type="checkbox" id="toggle-menu" class="toggle" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main contains gradient background, static text, and animated text box. -->
+      <main class="main-container" id="main-home">
+        <p class="hero-text">Sarah Jackson is an <br />up and coming:</p>
+        <div>
+          <p class="text-animate">Web Designer</p>
+        </div>
+      </main>
+
+      <!-- Portfolio header with breadcrumbs -->
+      <section class="header" id="portfolio">
+        <h2>Portfolio</h2>
+        <ul class="breadcrumbs">
+          <li><a href="#home">Home</a></li>
+          <li><p>/</p></li>
           <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
         </ul>
-      </nav>
-    </header>
+      </section>
 
-    <!-- Main contains gradient background, static text, and animated text box. -->
-    <main class="main-container" id="main-home">
-      <p class="hero-text">Sarah Jackson is an <br />up and coming:</p>
-      <div>
-        <p class="text-animate">Web Designer</p>
+      <!-- Portfolio Image Tiles (article, section, div??)-->
+      <div class="container">
+        <section class="portfolio-card">
+          <div class="ancient-child">
+            <h3>Ancient Child</h3>
+          </div>
+          <div class="project-description">
+            <h4>Website Redesign</h4>
+            <h4>2023</h4>
+            <p>Adobe XD, HTML5, CSS3</p>
+          </div>
+        </section>
+
+        <section class="portfolio-card">
+          <div class="daphnes">
+            <h3>Daphne's</h3>
+          </div>
+          <div class="project-description">
+            <h4>In-Class Project</h4>
+            <h4>2023</h4>
+            <p>Figma</p>
+          </div>
+        </section>
+
+        <section class="portfolio-card">
+          <div class="flower-shoppe">
+            <h3>Flower Shoppe</h3>
+          </div>
+          <div class="project-description">
+            <h4>Google Project</h4>
+            <h4>2023</h4>
+            <p>Figma</p>
+          </div>
+        </section>
       </div>
-    </main>
 
-    <!-- Portfolio header with breadcrumbs -->
-    <section class="header" id="portfolio">
-      <h2>Portfolio</h2>
-      <ul class="breadcrumbs">
-        <li><a href="#home">Home</a></li>
-        <li><p>/</p></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-      </ul>
-    </section>
-
-    <!-- Portfolio Image Tiles (article, section, div??)-->
-    <div class="container">
-      <section class="portfolio-card">
-        <div class="ancient-child">
-          <h3>Ancient Child</h3>
-        </div>
-        <div class="project-description">
-          <h4>Website Redesign</h4>
-          <h4>2023</h4>
-          <p>Adobe XD, HTML5, CSS3</p>
+      <!-- Testimonials (on tablet and desktop only) -->
+      <section class="testimonials">
+        <h4>Testimonials</h4>
+        <div class="testimonial-container">
+          <p>
+            "Sarah is awesome and I love working with her. I got exactly what I
+            wanted!"
+          </p>
+          <p class="signature">-Everyone</p>
         </div>
       </section>
 
-      <section class="portfolio-card">
-        <div class="daphnes">
-          <h3>Daphne's</h3>
-        </div>
-        <div class="project-description">
-          <h4>In-Class Project</h4>
-          <h4>2023</h4>
-          <p>Figma</p>
-        </div>
-      </section>
-
-      <section class="portfolio-card">
-        <div class="flower-shoppe">
-          <h3>Flower Shoppe</h3>
-        </div>
-        <div class="project-description">
-          <h4>Google Project</h4>
-          <h4>2023</h4>
-          <p>Figma</p>
-        </div>
-      </section>
+      <!-- Quick Links Footer -->
+      <footer id="quick-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="#">Email</a></li>
+        </ul>
+      </footer>
     </div>
-
-    <!-- Testimonials (on tablet and desktop only) -->
-    <section class="testimonials">
-      <h4>Testimonials</h4>
-      <div class="testimonial-container">
-        <p>
-          "Sarah is awesome and I love working with her. I got exactly what I
-          wanted!"
-        </p>
-        <p class="signature">-Everyone</p>
-      </div>
-    </section>
-
-    <!-- Quick Links Footer -->
-    <footer id="quick-links">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Resume</a></li>
-        <li><a href="#">Email</a></li>
-      </ul>
-    </footer>
   </body>
 </html>
