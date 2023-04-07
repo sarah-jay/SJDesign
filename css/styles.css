@@ -14,8 +14,8 @@ font-family: 'Julius Sans One', sans-serif;
 }
 
 .site-container {
-    max-width: 1600px;
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
 }
 
 /* Colors */
@@ -116,6 +116,9 @@ header {
     display: none;
 }
 
+header {
+    max-width: 100%;
+}
 
 nav ul {
     background-color: #FEF4FB;
@@ -256,6 +259,12 @@ nav ul li a:link {
 .breadcrumbs p {
     font-size: 20pt;
     line-height: 1;
+}
+
+.active-li {
+    color: var(--hot-blue);
+    font-family: 'Archivo Narrow', sans-serif;
+    letter-spacing: .075em;
 }
 
 /* Portfolio Image Tiles */
@@ -418,6 +427,14 @@ nav ul li a:link {
 
 .gradient-link {
     padding: 30px;
+    background: linear-gradient(to bottom right, var(--hot-blue), var(--hotpink));
+    background-clip:text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#contact-container a {
+    font-size:22pt;
 }
 
 #about .testimonials {
@@ -431,13 +448,6 @@ nav ul li a:link {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-#contact-container a {
-    background: linear-gradient(to bottom right, var(--hot-blue), var(--hotpink));
-    background-clip:text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 #form {
@@ -481,7 +491,7 @@ textarea {
     resize: none;
   }
 
-button {
+.submit-button {
     background-color: var(--hot-blue);
     border: none;
     color: white;
@@ -498,6 +508,111 @@ button {
 
 
 
+  /* Ancient Child */
+  #ancient-child {
+    position: relative;
+    top: 130px;
+    width: 90%;
+    margin: 0 auto 300px;
+  }
+
+  #portfolio-breadcrumbs {
+    position: relative;
+    top: -20px;
+  }
+
+
+  /* Header */
+  #ancient-child h2 {
+    margin: 0 80px 40px;
+  }
+
+
+  /* Banner Image */
+  .banner {
+    max-width: 800px;
+    width: 100%;
+    margin: 50px auto 50px;
+  }
+
+  .banner img {
+    width: 100%;
+  }
+
+  .software-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10%;
+  }
+
+
+
+  /* Gallery Images */
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #a1 {
+    width:40%;
+    margin: 20px;
+  }
+
+  #business-card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  #a2 {
+    min-width: 320px;
+    width:40%;
+    margin: 20px;
+  }
+
+  #a3 {
+    min-width: 320px;
+    width:40%;
+    margin: 20px;
+  }
+
+  #a4 {
+    width: 80%;
+    margin: 20px;
+  }
+
+  #ac-live {
+    width: 70%;
+    text-align: center;
+    position: relative;
+    margin: 10% auto;
+  }
+
+  #ac-live a{
+    font-size: 22pt;
+  }
+
+  .button-position {
+    margin-top: 80px;
+    margin-right: 5%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .portfolio-button {
+    background-color: var(--light-pink);
+    border: none;
+    color: var(--black);
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 18pt;
+    padding: 5px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 
 
 /* Media Queries */
@@ -512,7 +627,13 @@ button {
         font-size: 26pt;
     } 
     a:link {
-        font-size: 22pt;
+        font-size: 18pt;
+    }
+    .active-li {
+        font-size: 18pt;
+    }
+    .breadcrumbs li {
+        font-size: 18pt;
     }
     /* Header */
     header {
@@ -614,10 +735,25 @@ button {
 #about .testimonials {
     width: 100%;
     }
+
+
+
+
+
+/* Ancient Child */
+#ancient-child {
+    top: 180px
 }
 
+#ancient-child .breadcrumbs {
+    top:-35px;
+}
 
+#ac-live a{
+    font-size: 24pt;
+  }
 
+}
 
 
 /* Desktop View */
@@ -627,14 +763,16 @@ button {
         font-size: 50pt;
     }
     h2 {
-        font-size: 52pt;
+        font-size: 38pt;
     }
     a:link {
-        font-size: 26pt;
+        font-size: 22pt;
     }
-    body {
+    .breadcrumbs li {
+        font-size: 22pt;
+    }
+    .site-container {
         max-width: 1600px;
-        margin: auto;
     }
 
  /* Header */
@@ -715,4 +853,16 @@ button {
     flex-direction: row;
     align-items: center;
     }
+
+
+/* Ancient Child */
+
+#ancient-child {
+        top: 200px
+    }
+
+#ac-live a{
+        font-size: 26pt;
+      }
+
 }

@@ -19,9 +19,9 @@
           <input type="checkbox" id="toggle-menu" class="toggle" />
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li><a href="about.html#contact">Contact</a></li>
           </ul>
         </nav>
       </header>
@@ -31,7 +31,7 @@
         <ul class="breadcrumbs">
           <li><a href="index.html">Home</a></li>
           <li><p>/</p></li>
-          <li><a href="#about">About</a></li>
+          <li class="active-li">About</li>
         </ul>
       </div>
 
@@ -72,7 +72,7 @@
         <ul class="breadcrumbs">
           <li><a href="#home">Home</a></li>
           <li><p>/</p></li>
-          <li><a href="#portfolio">Contact</a></li>
+          <li class="active-li">Contact</li>
         </ul>
       </section>
       <section id="contact-container">
@@ -84,7 +84,7 @@
             respond to emails within a couple days. <br />Talk to you soon!
           </p>
           <a class="gradient-link" href="#">View My LinkedIn</a>
-          <a href="#">Download My Resume</a>
+          <a class="gradient-link" href="#">Download My Resume</a>
         </div>
         <div id="form">
           <div id="form.container">
@@ -107,7 +107,9 @@
                 placeholder="Message"
               ></textarea>
               <br />
-              <button type="submit" value="Submit">Send</button>
+              <button class="submit-button" type="submit" value="Submit">
+                Send
+              </button>
             </form>
           </div>
         </div>
