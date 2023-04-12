@@ -774,6 +774,9 @@ textarea {
     .site-container {
         max-width: 1600px;
     }
+    header {
+        max-width: 1600px;
+    }
 
  /* Header */
     header {
