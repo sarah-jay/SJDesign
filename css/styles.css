@@ -470,16 +470,17 @@ input {
     background-color: var(--background);
     color: var(--white);
     font-family: 'Archivo Narrow', sans-serif;
-    font-size: larger;
+    font-size: 16pt;
     border-radius: 5px;
 }
 
 .contact-image {
     float: right;
     position: relative;
-    top: -138px;
+    top: -140px;
     right: 10px;
     border-radius: 5px;
+    border: 2px solid var(--black);
 }
 
 
@@ -495,7 +496,7 @@ textarea {
     background-color: var(--background);
     color: var(--white);
     font-family: 'Archivo Narrow', sans-serif;
-    font-size: larger;
+    font-size: 16pt;
     resize: none;
   }
 
@@ -513,9 +514,16 @@ textarea {
     position: relative;
     top: -90px;
     cursor: pointer;
+    box-shadow: 1px 1px 4px var(--background);
   }
 
+::placeholder {
+    color: (var(--white));
+}
 
+/* :focus {
+    
+} */
 
 
   /* Ancient Child */
