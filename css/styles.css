@@ -106,10 +106,18 @@ header {
     line-height: 1;
     position: relative;
     bottom: 3%;
-    background: -webkit-linear-gradient(var(--hot-blue), var(--hotpink));
+    background: radial-gradient(circle, rgba(54,183,189,1) 0%, rgba(238,118,202,1) 100%);
+    background-size: 200% 200%;
+    animation: HamburgerGradient 10s ease infinite;
     background-clip:text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@keyframes HamburgerGradient {
+    0%{background-position:100% 50%}
+    50%{background-position:0% 50%}
+    100%{background-position:100% 50%}
 }
 
 .toggle {
@@ -169,27 +177,15 @@ nav ul li a:link {
 }
 
 .main-container {
-    animation-name: color-me;
-    animation-duration: 5s;
-    animation-iteration-count:infinite;
+    background: radial-gradient(circle, rgba(54,183,189,1) 0%, rgba(238,118,202,1) 100%);
+    background-size: 200% 200%;
+    animation: GradientShift 10s ease infinite;
 }
 
-@keyframes color-me {
-    0% {
-        background-image: linear-gradient(to bottom right, var(--hot-blue), var(--hotpink));
-    }
-    25% {
-        background-image: linear-gradient(to bottom left, var(--hot-blue), var(--hotpink));
-    }
-    50% {
-        background-image: linear-gradient(to top left, var(--hot-blue), var(--hotpink));
-    }
-    75% {
-        background-image: linear-gradient(to top right, var(--hot-blue), var(--hotpink));
-    }
-    100% {
-        background-image: linear-gradient(to bottom right, var(--hot-blue), var(--hotpink));
-    }
+@keyframes GradientShift {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 .hero-text {
@@ -452,6 +448,7 @@ nav ul li a:link {
 
 #form {
     width: 90%;
+    height: 570px;
     max-width: 500px;
     padding: 20px;
     margin: 20px;
@@ -465,10 +462,11 @@ form {
 }
 
 input {
-    width: 90%;
+    width: 45%;
+    height: 35px;
     max-width: 500px;
     padding: 5px 18px;
-    margin: 8px 8px;
+    margin: 16px 8px;
     background-color: var(--background);
     color: var(--white);
     font-family: 'Archivo Narrow', sans-serif;
@@ -476,13 +474,23 @@ input {
     border-radius: 5px;
 }
 
+.contact-image {
+    float: right;
+    position: relative;
+    top: -138px;
+    right: 10px;
+    border-radius: 5px;
+}
+
 
 textarea {
     width: 90%;
     max-width: 500px;
-    height: 150px;
+    height: 200px;
     padding: 5px 18px;;
     margin: 8px 8px;
+    position:relative;
+    top: -100px;
     border-radius: 5px;
     background-color: var(--background);
     color: var(--white);
@@ -502,6 +510,8 @@ textarea {
     text-decoration: none;
     float: right;
     margin: 8px 10px;
+    position: relative;
+    top: -90px;
     cursor: pointer;
   }
 
@@ -810,7 +820,7 @@ textarea {
         padding-top: 100px;
     }
     .ancient-child h3 {
-        width: 50%;
+        width: 60%;
     }
     .daphnes {
         padding-top: 100px;
@@ -822,7 +832,7 @@ textarea {
         padding-top: 100px;
     }
     .flower-shoppe h3 {
-        width: 50%;
+        width: 60%;
     }
   
  /* Testimonials */
