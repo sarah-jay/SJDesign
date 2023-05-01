@@ -96,49 +96,73 @@
           >
           <a class="gradient-link" href="#">Download My Resume</a>
         </div>
+
+        <!-- Email Form -->
+
         <div id="form">
           <div id="form.container">
-            <form>
-              <input type="text" id="name" name="name" placeholder="Name" />
+            <form id="emailform" novalidate>
+              <div class="small-text">
+                <input type="text" id="name" name="name" placeholder="Name" />
+                <small class="error name-error"></small>
+              </div>
               <br />
-              <input type="email" id="email" name="email" placeholder="Email" />
+              <div class="small-text">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                />
+                <small class="error email-error"></small>
+              </div>
               <br />
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                placeholder="Subject"
-                autocomplete="off"
-              />
+              <div class="small-text">
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  placeholder="Subject"
+                  autocomplete="off"
+                />
+                <small class="error subject-error"></small>
+              </div>
               <img
                 class="contact-image"
                 src="images/keyboard.png"
                 alt="typing on a laptop"
               />
               <br />
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Message"
-              ></textarea>
+              <div class="small-text">
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Message"
+                ></textarea>
+                <small class="error message-error"></small>
+              </div>
               <br />
               <button class="submit-button" type="submit" value="Submit">
                 Send
               </button>
             </form>
+            <script src="validate.js"></script>
           </div>
         </div>
       </section>
 
       <!-- Quick Links Footer -->
+
       <footer id="quick-links">
         <h4>Quick Links</h4>
         <ul>
-          <a
-            href="https://www.linkedin.com/in/sarah-jackson-950376256/"
-            target="_blank"
-            >LinkedIn</a
-          >
+          <li>
+            <a
+              href="https://www.linkedin.com/in/sarah-jackson-950376256/"
+              target="_blank"
+              >LinkedIn</a
+            >
+          </li>
           <li><a href="#">Resume</a></li>
           <li><a href="#">Email</a></li>
         </ul>
