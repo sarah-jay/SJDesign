@@ -60,7 +60,7 @@ h3 {
 h4 {
     color: var(--black);
     font-family: 'Julius Sans One', sans-serif;
-    font-size: 18pt;  
+    font-size: 18pt;
 }
 
 p {
@@ -97,7 +97,7 @@ header {
 }
 
 #home #hamburger {
-    
+
     cursor: pointer;
 }
 
@@ -106,18 +106,26 @@ header {
     line-height: 1;
     position: relative;
     bottom: 3%;
-    background: radial-gradient(circle, rgba(54,183,189,1) 0%, rgba(238,118,202,1) 100%);
-    background-size: 200% 200%;
-    animation: HamburgerGradient 10s ease infinite;
-    background-clip:text;
+    background: radial-gradient(circle, rgba(54, 183, 189, 1) 0%, rgba(238, 118, 202, 1) 100%);
+    background-size: 300% 300%;
+    animation: HamburgerGradient 15s ease infinite;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 @keyframes HamburgerGradient {
-    0%{background-position:100% 50%}
-    50%{background-position:0% 50%}
-    100%{background-position:100% 50%}
+    0% {
+        background-position: 100% 50%
+    }
+
+    50% {
+        background-position: 0% 50%
+    }
+
+    100% {
+        background-position: 100% 50%
+    }
 }
 
 .toggle {
@@ -133,7 +141,7 @@ nav ul {
     position: fixed;
     width: 80%;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     height: 90vh;
     z-index: 999;
@@ -150,15 +158,15 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color:#EE76CA;
+    color: #EE76CA;
 }
 
 nav ul li a:link {
-    color:#262626;
+    color: #262626;
     font-family: 'Julius Sans One', sans-serif;
 }
 
-.toggle:checked ~ ul {
+.toggle:checked~ul {
     display: flex;
 }
 
@@ -166,7 +174,7 @@ nav ul li a:link {
 
 /* Hero Section */
 #main-home {
-    padding-top:250px;
+    padding-top: 250px;
     padding-bottom: 250px;
     border: 1px solid var(--black);
     margin-bottom: 10vh;
@@ -177,16 +185,28 @@ nav ul li a:link {
 }
 
 .main-container {
-    background: radial-gradient(circle, rgba(54,183,189,1) 0%, rgba(238,118,202,1) 100%);
-    background-size: 200% 200%;
-    animation: GradientShift 10s ease infinite;
+    background: radial-gradient(circle, rgba(54, 183, 189, 1) 0%, rgba(238, 118, 202, 1) 100%);
+    background-size: 400% 400%;
+    animation: GradientShift 15s ease infinite;
 }
 
+
+
 @keyframes GradientShift {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
 }
+
+
 
 .hero-text {
     font-family: 'Archivo Narrow', sans-serif;
@@ -202,21 +222,66 @@ nav ul li a:link {
     font-family: 'Anek Latin', sans-serif;
     font-size: 5vw;
     position: relative;
-    left: 40px;
+    /* left: 40px; */
     top: 100px;
-    animation-name: move-me;
-    animation-duration: 3s;
-    transition-timing-function: ease-in-out;
-    animation-iteration-count:infinite;
 }
-@keyframes move-me {
-    from{
-        transform: translate(120px);
+
+.text-1 {
+    animation: text1;
+    left: 50px;
+}
+
+.text-2 {
+    animation: text2;
+    left: 25px;
+}
+
+.text-1,
+.text-2 {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.text-1::after,
+.text-2::after {
+    position: absolute;
+    right: 0;
+}
+
+
+@keyframes text2 {
+
+    0%,
+    50%,
+    100% {
+        width: 0;
     }
-    to {
-        transform: translate(-30px);
+
+    60%,
+    90% {
+        width: 8em;
     }
 }
+
+@keyframes text1 {
+
+    0%,
+    50%,
+    100% {
+        width: 0;
+    }
+
+    10%,
+    40% {
+        width: 7em;
+    }
+}
+
+
 
 /* Portfolio Header */
 .header {
@@ -246,11 +311,11 @@ nav ul li a:link {
 
 .breadcrumbs li a:visited {
     color: var(--white)
- }
+}
 
 .breadcrumbs li a:hover {
     color: var(--hotpink)
- } 
+}
 
 .breadcrumbs p {
     font-size: 20pt;
@@ -265,7 +330,7 @@ nav ul li a:link {
 
 /* Portfolio Image Tiles */
 .container {
-    
+
     display: flex;
     flex-direction: column;
     margin: 10% auto;
@@ -276,13 +341,13 @@ nav ul li a:link {
     background-image: url("../images/ancient-child.png");
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 250px;
+    padding-top: 300px;
     padding-bottom: 100px;
 }
 
 .ancient-child h3 {
     background-color: var(--black);
-    width:30%;
+    width: 30%;
     padding-left: 3%;
     padding-right: 10%;
     position: relative;
@@ -300,7 +365,7 @@ nav ul li a:link {
 
 .daphnes h3 {
     background-color: var(--black);
-    width:30%;
+    width: 30%;
     padding-left: 3%;
     padding-right: 10%;
     position: relative;
@@ -315,9 +380,10 @@ nav ul li a:link {
     padding-top: 250px;
     padding-bottom: 100px;
 }
+
 .flower-shoppe h3 {
     background-color: var(--black);
-    width:30%;
+    width: 30%;
     padding-left: 3%;
     padding-right: 10%;
     position: relative;
@@ -391,13 +457,13 @@ nav ul li a:link {
     margin: auto;
     position: relative;
     top: 110px;
-    
+
 }
 
 #about-container {
     width: 90%;
     margin: auto;
-    padding-top:250px;
+    padding-top: 250px;
     padding-bottom: 200px;
     display: flex;
     flex-direction: column;
@@ -405,7 +471,7 @@ nav ul li a:link {
 }
 
 #about-container img {
-    max-width:100%;
+    max-width: 100%;
 }
 
 
@@ -424,17 +490,17 @@ nav ul li a:link {
 .gradient-link {
     padding: 30px;
     background: linear-gradient(to bottom right, var(--hot-blue), var(--hotpink));
-    background-clip:text;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 #contact-container a {
-    font-size:22pt;
+    font-size: 22pt;
 }
 
 #about .testimonials {
-    display:block;
+    display: block;
     width: 90%;
     margin: auto;
     margin-bottom: 100px;
@@ -449,7 +515,7 @@ nav ul li a:link {
 .small-text {
     display: flex;
     flex-direction: column;
-    font-family:'Archivo Narrow', sans-serif;
+    font-family: 'Archivo Narrow', sans-serif;
     color: var(--black);
 }
 
@@ -503,7 +569,7 @@ textarea {
     font-family: 'Archivo Narrow', sans-serif;
     font-size: 16pt;
     resize: none;
-  }
+}
 
 .submit-button {
     background-color: var(--hot-blue);
@@ -518,121 +584,173 @@ textarea {
     margin: 8px 10px;
     cursor: pointer;
     box-shadow: 1px 1px 4px var(--background);
-  }
+}
 
 ::placeholder {
     color: (var(--white));
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
     outline: 1px solid var(--light-blue);
 }
 
 
-  /* Ancient Child */
-  #ancient-child {
+/* Ancient Child */
+#ancient-child {
     position: relative;
     top: 130px;
     width: 90%;
     margin: 0 auto 300px;
-  }
+}
 
-  #portfolio-breadcrumbs {
+#portfolio-breadcrumbs {
     position: relative;
     top: -20px;
-  }
+}
 
 
-  /* Header */
-  #ancient-child h2 {
+/* Header */
+#ancient-child h2 {
     margin: 0 80px 40px;
-  }
+}
 
 
-  /* Banner Image */
-  .banner {
+/* Banner Image */
+.banner {
     max-width: 800px;
     width: 100%;
     margin: 50px auto 50px;
-  }
+}
 
-  .banner img {
+.banner img {
     width: 100%;
-  }
+}
 
-  .software-list {
+.software-list {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10%;
-  }
+}
 
 
 
-  /* Gallery Images */
-  .gallery {
+/* Gallery Images */
+.gallery {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+}
 
-  #a1 {
-    width:40%;
+#a1 {
+    width: 40%;
     margin: 20px;
-  }
+}
 
-  #business-card {
+#business-card {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-  }
-  
-  #a2 {
-    min-width: 320px;
-    width:40%;
-    margin: 20px;
-  }
+}
 
-  #a3 {
+#a2 {
     min-width: 320px;
-    width:40%;
+    width: 40%;
     margin: 20px;
-  }
+}
 
-  #a4 {
+#a3 {
+    min-width: 320px;
+    width: 40%;
+    margin: 20px;
+}
+
+#a4 {
     width: 80%;
     margin: 20px;
-  }
+}
 
-  #ac-live {
+#ac-live {
     width: 70%;
     text-align: center;
     position: relative;
     margin: 10% auto;
-  }
+}
 
-  #ac-live a{
+#ac-live a {
     font-size: 22pt;
-  }
+}
 
-  .button-position {
-    margin-top: 80px;
-    margin-right: 5%;
+.double-button-position {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.back-button-position {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.next-button-position {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 90%;
     display: flex;
     justify-content: flex-end;
-  }
+}
 
-  .portfolio-button {
+
+.portfolio-button {
     background-color: var(--light-pink);
-    border: none;
     color: var(--black);
+    box-shadow: 0px 0px 5px #262626;
     font-family: 'Archivo Narrow', sans-serif;
     font-size: 18pt;
-    padding: 5px 30px;
+    height: 40px;
+    width: 85px;
     border-radius: 5px;
     text-decoration: none;
     cursor: pointer;
-  }
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Daphnes Hot Sauce */
+
+#daphnes,
+#flower-shoppe {
+    position: relative;
+    top: 130px;
+    width: 90%;
+    margin: 0 auto 300px;
+}
+
+.temporary {
+    text-align: center;
+}
 
 
 
@@ -642,35 +760,41 @@ input:focus, textarea:focus {
 /* Tablet View */
 @media screen and (min-width:768px) {
     h1 {
-        font-size:40pt;
+        font-size: 40pt;
     }
+
     h3 {
         font-size: 26pt;
-    } 
+    }
+
     a:link {
         font-size: 18pt;
     }
+
     .active-li {
         font-size: 18pt;
     }
+
     .breadcrumbs li {
         font-size: 18pt;
     }
+
     /* Header */
     header {
         height: 135px;
     }
-/* Nav */
+
+    /* Nav */
     label div {
         display: none;
     }
 
-    nav ul{
+    nav ul {
         position: relative;
         display: flex;
         flex-direction: row;
         justify-content: center;
-        height:0vh;
+        height: 0vh;
         width: 100%;
     }
 
@@ -680,16 +804,18 @@ input:focus, textarea:focus {
     }
 
     nav ul li a:link {
-        color:#FCFCFC;
+        color: #FCFCFC;
         font-family: 'Julius Sans One', sans-serif;
     }
+
     a:visited {
         color: var(--white);
     }
+
     nav ul li a:hover {
         color: var(--hotpink)
     }
-  
+
     /* Portfolio Section */
     .container {
         width: 80%;
@@ -722,6 +848,7 @@ input:focus, textarea:focus {
     .text-container {
         width: 90%;
     }
+
     .testimonials {
         display: block;
     }
@@ -731,93 +858,104 @@ input:focus, textarea:focus {
     #quick-links {
         max-height: 100px;
     }
+
     #quick-links h4 {
         font-size: 24pt;
     }
+
     #quick-links ul {
         width: 60%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
+
     #quick-links a {
         font-size: 24pt;
     }
 
 
-/* About Page */
+    /* About Page */
 
-#about-breadcrumbs {
-    top:140px;
-}
-#about-container {
-    flex-direction: column;
-}
-#about .testimonials {
-    width: 100%;
+    #about-breadcrumbs {
+        top: 140px;
+    }
+
+    #about-container {
+        flex-direction: column;
+    }
+
+    #about .testimonials {
+        width: 100%;
     }
 
 
 
 
 
-/* Ancient Child */
-#ancient-child {
-    top: 180px
-}
+    /* Ancient Child */
+    #ancient-child,
+    #daphnes,
+    #flower-shoppe {
+        top: 160px
+    }
 
-#ancient-child .breadcrumbs {
-    top:-35px;
-}
-
-#ac-live a{
-    font-size: 24pt;
-  }
+    #ac-live a {
+        font-size: 24pt;
+    }
 
 }
 
 
 /* Desktop View */
 @media screen and (min-width:1280px) {
- /* General Style Rules */
+
+    /* General Style Rules */
     h1 {
         font-size: 50pt;
     }
+
     h2 {
         font-size: 38pt;
     }
+
     a:link {
         font-size: 22pt;
     }
+
     .breadcrumbs li {
         font-size: 22pt;
     }
+
     .site-container {
         max-width: 1600px;
     }
+
     header {
         max-width: 1600px;
     }
 
- /* Header */
+    /* Header */
     header {
         height: 155px;
     }
+
     nav ul li {
         padding: 20px 5%;
     }
 
-    
- /* Hero Section */
+
+    /* Hero Section */
     .hero-text {
         font-size: 38pt;
     }
+
     .text-animate {
         font-size: 46pt;
     }
-    
-/* Portfolio Cards  */
-    
+
+    /* Portfolio Cards  */
+
     .container {
         width: 90%;
         flex-direction: row;
@@ -830,63 +968,75 @@ input:focus, textarea:focus {
     .ancient-child {
         padding-top: 100px;
     }
+
     .ancient-child h3 {
         width: 60%;
     }
+
     .daphnes {
         padding-top: 100px;
     }
+
     .daphnes h3 {
         width: 50%;
     }
+
     .flower-shoppe {
         padding-top: 100px;
     }
+
     .flower-shoppe h3 {
         width: 60%;
     }
-  
- /* Testimonials */
+
+    /* Testimonials */
 
     .testimonials {
-    width: 80%;
-    margin: 0 auto;
+        width: 80%;
+        margin: 0 auto;
     }
 
-/* About Page */
+    /* About Page */
 
 
-#about-breadcrumbs {
-    top:160px;
-}
-
-#about-container {
-    display: flex;
-    flex-direction: row;
+    #about-breadcrumbs {
+        top: 160px;
     }
 
-#about-photo {
-    width: 50%;
-}
+    #about-container {
+        display: flex;
+        flex-direction: row;
+    }
 
-.text-container {
-    width:50%;
-}
+    #about-photo {
+        width: 50%;
+    }
 
-#contact-container {
-    flex-direction: row;
-    align-items: center;
+    .text-container {
+        width: 50%;
+    }
+
+    #contact-container {
+        flex-direction: row;
+        align-items: center;
     }
 
 
-/* Ancient Child */
+    /* Ancient Child */
 
-#ancient-child {
-        top: 200px
+    #ancient-child,
+    #daphnes,
+    #flower-shoppe {
+        top: 180px
     }
 
-#ac-live a{
+    #ac-live a {
         font-size: 26pt;
-      }
+    }
 
+    .double-button-position,
+    .next-button-position,
+    .back-button-position {
+        max-width: 1450px;
+    }
 }

@@ -13,12 +13,12 @@ form.addEventListener("submit", (e) => {
 
     checkValues();
 
-    if((userName.value !== "") && (email.value !== "") && (message.value !== "")) {
+    if ((userName.value !== "") && (email.value !== "") && (message.value !== "")) {
         form.submit();
         console.log("Form Submitted!");
         alert("Form Submitted!");
-    } 
-   
+    }
+
 });
 
 function checkValues() {
@@ -33,43 +33,43 @@ function checkValues() {
     let messageError = document.querySelector(".message-error");
 
 
-// First Name Logic
+    // First Name Logic
 
-if(userNameValue == "") {
-    console.log("its working");
-    userName.style.backgroundColor = "#EE76CA";
-    // userName.style.boxShadow =  1px 4px 4px var(--black);
-    nameError.innerText = "Please enter your name.";
-} else {
-    userName.style.backgroundColor = "#4f4f4f";
-    nameError.innerText = "";
-}
+    if (userNameValue == "") {
+        console.log("its working");
+        userName.style.backgroundColor = "#EE76CA";
+        // userName.style.boxShadow =  1px 4px 4px var(--black);
+        nameError.innerText = "Please enter your name.";
+    } else {
+        userName.style.backgroundColor = "#4f4f4f";
+        nameError.innerText = "";
+    }
 
-if(emailValue == "") {
-    console.log("its working");
-    email.style.backgroundColor = "#EE76CA";
-    emailError.innerText = "Please enter a valid email.";
-} else {
-    email.style.backgroundColor = "#4f4f4f";
-    emailError.innerText = "";
-}
+    if (emailValue == "") {
+        console.log("its working");
+        email.style.backgroundColor = "#EE76CA";
+        emailError.innerText = "Please enter a valid email.";
+    } else {
+        email.style.backgroundColor = "#4f4f4f";
+        emailError.innerText = "";
+    }
 
-if(subjectValue == "") {
-    console.log("its working");
-    subject.style.backgroundColor = "#EE76CA";
-    subjectError.innerText = "Please enter your email.";
-} else {
-    subject.style.backgroundColor = "#4f4f4f";
-    subjectError.innerText = "";
-}
+    if (subjectValue == "") {
+        console.log("its working");
+        subject.style.backgroundColor = "#EE76CA";
+        subjectError.innerText = "Please enter your email.";
+    } else {
+        subject.style.backgroundColor = "#4f4f4f";
+        subjectError.innerText = "";
+    }
 
-if(messageValue == "") {
-    console.log("its working");
-    message.style.backgroundColor = "#EE76CA";
-    messageError.innerText = "Please enter a message.";
-} else {
-    message.style.backgroundColor = "#4f4f4f";
-    messageError.innerText = "";
-}
+    if (messageValue == "") {
+        console.log("its working");
+        message.style.backgroundColor = "#EE76CA";
+        messageError.innerText = "Please enter a message.";
+    } else {
+        message.style.backgroundColor = "#4f4f4f";
+        messageError.innerText = "";
+    }
 
 }
