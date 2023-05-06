@@ -336,6 +336,26 @@ nav ul li a:link {
     margin: 10% auto;
 }
 
+.portfolio-card h3 {
+    background-color: var(--black);
+    width: 30%;
+    padding-left: 3%;
+    padding-right: 10%;
+    position: relative;
+    left: 5%;
+}
+
+
+.portfolio-card {
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+.portfolio-card:hover {
+    transform: scale(1.05)
+}
+
+
 .ancient-child {
     background-color: var(--black);
     background-image: url("../images/ancient-child.png");
@@ -343,15 +363,6 @@ nav ul li a:link {
     background-repeat: no-repeat;
     padding-top: 300px;
     padding-bottom: 100px;
-}
-
-.ancient-child h3 {
-    background-color: var(--black);
-    width: 30%;
-    padding-left: 3%;
-    padding-right: 10%;
-    position: relative;
-    left: 5%;
 }
 
 .daphnes {
@@ -363,14 +374,6 @@ nav ul li a:link {
     padding-bottom: 100px;
 }
 
-.daphnes h3 {
-    background-color: var(--black);
-    width: 30%;
-    padding-left: 3%;
-    padding-right: 10%;
-    position: relative;
-    left: 5%;
-}
 
 .flower-shoppe {
     background-color: var(--black);
@@ -381,14 +384,6 @@ nav ul li a:link {
     padding-bottom: 100px;
 }
 
-.flower-shoppe h3 {
-    background-color: var(--black);
-    width: 30%;
-    padding-left: 3%;
-    padding-right: 10%;
-    position: relative;
-    left: 5%;
-}
 
 .project-description {
     display: none;
@@ -752,6 +747,12 @@ textarea:focus {
     text-align: center;
 }
 
+/* Flower Shoppe */
+
+video {
+    display: block;
+    margin: 0 auto;
+}
 
 
 /* Media Queries */
