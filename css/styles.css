@@ -582,7 +582,7 @@ textarea {
 }
 
 ::placeholder {
-    color: (var(--white));
+    color: var(--white);
 }
 
 input:focus,
@@ -905,6 +905,14 @@ video {
         font-size: 24pt;
     }
 
+
+    /* Flower Shoppe */
+
+    video {
+        width: 640px;
+        height: 360px;
+    }
+
 }
 
 
@@ -1039,5 +1047,12 @@ video {
     .next-button-position,
     .back-button-position {
         max-width: 1450px;
+    }
+
+    /* Flower Shoppe */
+
+    video {
+        width: 854px;
+        height: 480px;
     }
 }
